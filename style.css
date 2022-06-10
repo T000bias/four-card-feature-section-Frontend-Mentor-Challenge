@@ -1,0 +1,158 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Fonts
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600
+
+
+*/
+
+/* initial Styles */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+:root {
+    /* All custom variables go here. */
+    /* EX color: --clr-color | font size: --fs-size | font weight: --fw-size */
+
+    /* Colors */
+        /* Primary Colors */
+        --clr-red: hsl(0,78%,62%);
+        --clr-cyan: hsl(180,62%,55%);
+        --clr-orange: hsl(34,97%,64%);
+        --clr-blue: hsl(212, 86%, 64%);
+
+        /* Neutral Colors */
+        --clr-very-dard-blue: hsl(234,12%,34%);
+        --clr-grayish-blue: hsl(229, 6%, 66%);
+        --clr-very-light-gray: hsl(0,0%,98%);
+    /* Font Sizes */
+
+    /* Font Weights */
+}
+
+
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--clr-very-light-gray);
+}
+
+header {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 200;
+    margin: 0;
+}
+
+h2 span {
+    font-weight: 600;
+}
+
+p {
+    color: var(--clr-grayish-blue);
+}
+
+
+.container {
+    display: flex;
+    max-width: 1290px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.box {
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    padding: 25px;
+    width: 350px;
+    margin: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    position:relative;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    background-color:purple;
+    height: 5px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.box-blue::after { background-color:var(--clr-blue); }
+.box-red::after { background-color:var(--clr-red); }
+.box-cyan::after { background-color:var(--clr-cyan); }
+.box-orange::after { background-color:var(--clr-orange); }
+
+.box-push {
+   transform: translateY(50%); 
+}
+
+
+.box img {
+    display: block;
+    margin-left: auto;
+}
+
+.box h2 {
+    margin: 0;
+}
+
+.box p {
+    font-size: 14px;
+    margin: 15px 0 30px;
+}
+
+@media (max-width: 775px) {
+    .box-push {
+        transform: translate(0)
+    }
+}
